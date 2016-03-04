@@ -15,6 +15,7 @@
 		F40518BC1C7AE20F00F72D0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40518BB1C7AE20F00F72D0B /* Assets.xcassets */; };
 		F40518BF1C7AE20F00F72D0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40518BD1C7AE20F00F72D0B /* LaunchScreen.storyboard */; };
 		F43DB5FA1C892C8C00B1D352 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DB5F91C892C8C00B1D352 /* SecondVC.m */; };
+		F43DB5FD1C89EBBB00B1D352 /* ParamView.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DB5FC1C89EBBB00B1D352 /* ParamView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		F40518C01C7AE20F00F72D0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43DB5F81C892C8C00B1D352 /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
 		F43DB5F91C892C8C00B1D352 /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
+		F43DB5FB1C89EBBB00B1D352 /* ParamView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParamView.h; path = Socket/ParamView.h; sourceTree = "<group>"; };
+		F43DB5FC1C89EBBB00B1D352 /* ParamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParamView.m; path = Socket/ParamView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 		F40518A31C7AE20F00F72D0B = {
 			isa = PBXGroup;
 			children = (
+				F43DB5FB1C89EBBB00B1D352 /* ParamView.h */,
+				F43DB5FC1C89EBBB00B1D352 /* ParamView.m */,
 				F40518AE1C7AE20F00F72D0B /* Socket */,
 				F40518AD1C7AE20F00F72D0B /* Products */,
 				E75BC14A51BDBA83B115AED8 /* Pods */,
@@ -232,6 +237,7 @@
 				F40518B71C7AE20F00F72D0B /* ViewController.m in Sources */,
 				F40518B41C7AE20F00F72D0B /* AppDelegate.m in Sources */,
 				F43DB5FA1C892C8C00B1D352 /* SecondVC.m in Sources */,
+				F43DB5FD1C89EBBB00B1D352 /* ParamView.m in Sources */,
 				F40518B11C7AE20F00F72D0B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Socket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mfw.Socket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Socket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mfw.Socket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
