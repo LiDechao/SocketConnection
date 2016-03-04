@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Aa-zW-V90">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Server监测-->
+        <scene sceneID="Uvk-SR-gqu">
+            <objects>
+                <viewController id="EhH-62-NCd" customClass="SecondVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="USV-fn-Qth"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sry-HJ-8YC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8kg-Vx-pjX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Server监测" id="Xcn-v5-XKC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZA-BA-Mkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="797"/>
+        </scene>
+        <!--终端监测-->
+        <scene sceneID="cLN-ul-Vdg">
+            <objects>
+                <viewController id="LRU-TK-2pg" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SUL-jl-RHh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ddp-ym-x7z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sO9-6M-xLr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="终端监测" id="h2f-bg-I3w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1I-R0-jqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="137"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZTf-Rn-2Nr">
+            <objects>
+                <tabBarController id="3Aa-zW-V90" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="xXD-DO-kdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LRU-TK-2pg" kind="relationship" relationship="viewControllers" id="1Hi-1L-iTc"/>
+                        <segue destination="EhH-62-NCd" kind="relationship" relationship="viewControllers" id="E2D-0r-HeL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNS-uB-hI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195" y="467"/>
+        </scene>
+    </scenes>
+</document>
