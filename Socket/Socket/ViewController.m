@@ -48,9 +48,9 @@
     self.clientSocket = socket(AF_INET, SOCK_STREAM, 0);
     
     if (self.clientSocket > 0) {
-        NSLog(@"Socket create success %d", self.clientSocket);
+        NSLog(@"create socket success. The socket is %d", self.clientSocket);
     } else {
-        NSLog(@"Socket create failed");
+        NSLog(@"create socket failed");
     }
     
     /**
@@ -103,6 +103,8 @@
      *
      *  @return f
      */
+    
+    //这里为同步操作，若服务端没有返回数据，会卡死
     ssize_t recvLength = recv(self.clientSocket, buffer, sizeof(buffer), 0);
     
     // 从buffer中读取服务器发回的数据
@@ -121,24 +123,29 @@
 
 - (void)p_layoutSubviews {
     self.paramView = [ParamView new];
+    self.paramView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.paramView];
     [self.paramView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.right.equalTo(self.view);
         make.top.equalTo(self.view).with.offset(20);
-        make.height.greaterThanOrEqualTo(@200);
+        make.height.mas_equalTo(@250);
     }];
     
     __weak typeof(self) weakSelf = self;
-    self.paramView.connectionBlock = ^{
+    self.paramView.connectionBlock = ^(NSString *ip, NSString *port){
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        int res = [strongSelf connectionToServer:strongSelf.paramView.ipField.text port:strongSelf.paramView.portField.text.intValue];
-        NSLog(@"%D", res);
+        int res = [strongSelf connectionToServer:ip port:port.intValue];
+        if (!res) {
+            NSLog(@"connect success");
+        } else {
+            NSLog(@"connect success");
+        }
     };
     self.paramView.sendMessageBlock = ^(NSString *message) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (strongSelf.paramView.messageField.text.length) {
-            NSString *msg = [strongSelf sendMessageToServer:strongSelf.paramView.messageField.text];
-            NSLog(@"%@", msg);
+        if (message.length) {
+            NSLog(@"send messsage = %@", message);
+            NSLog(@"receive messsage = %@", [strongSelf sendMessageToServer:message]);
         }
     };
 }

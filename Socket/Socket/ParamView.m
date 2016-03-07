@@ -11,6 +11,9 @@
 
 @interface ParamView ()
 
+@property (nonatomic, strong) UITextField *ipField;
+@property (nonatomic, strong) UITextField *portField;
+@property (nonatomic, strong) UITextField *messageField;
 @property (nonatomic, strong) UIButton *connectionBtn;
 @property (nonatomic, strong) UIButton *sendBtn;
 
@@ -35,7 +38,7 @@
     [tips mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.right.equalTo(self);
         make.top.equalTo(self).with.offset(20);
-        make.height.greaterThanOrEqualTo(@30);
+        make.height.mas_equalTo(90);
     }];
     
     UIView *socketBgView = [UIView new];
@@ -121,7 +124,7 @@
 
 - (void)connectToTheServer {
     if (self.connectionBlock) {
-        self.connectionBlock();
+        self.connectionBlock(self.ipField.text, self.portField.text);
     }
 }
 

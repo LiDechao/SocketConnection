@@ -8,7 +8,7 @@
         <!--Server监测-->
         <scene sceneID="Uvk-SR-gqu">
             <objects>
-                <viewController id="EhH-62-NCd" customClass="SecondVC" sceneMemberID="viewController">
+                <viewController id="EhH-62-NCd" customClass="CFSocketVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="USV-fn-Qth"/>
                         <viewControllerLayoutGuide type="bottom" id="Sry-HJ-8YC"/>

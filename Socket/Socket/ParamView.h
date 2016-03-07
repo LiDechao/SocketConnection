@@ -10,11 +10,9 @@
 
 @interface ParamView : UIView
 
-@property (nonatomic, strong) UITextField *ipField;
-@property (nonatomic, strong) UITextField *portField;
-@property (nonatomic, strong) UITextField *messageField;
+@property (nonatomic, strong) UILabel *messageLbl;
 
-@property (nonatomic, copy) void (^connectionBlock)();
+@property (nonatomic, copy) void (^connectionBlock)(NSString *ip, NSString *port);
 @property (nonatomic, copy) void (^sendMessageBlock)(NSString *message);
 
 @end
